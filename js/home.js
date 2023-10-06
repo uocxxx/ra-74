@@ -1,6 +1,6 @@
 $(function() {
     // Khi load trang, thì sẽ được chạy vào đây
-    checkLogin();
+    // checkLogin();
     $("#body").load("./html/account-page.html");
     getListAccount();
 });
