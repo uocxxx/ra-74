@@ -1,0 +1,57 @@
+#id_1{
+    color: yellow;
+}
+
+.item{
+width: 330px;
+}
+
+div.item{
+    color: blue;
+}
+
+div h3{
+    color: red;
+}
+
+h2>b{
+    background-color: aqua !important; 
+}
+
+div b{
+background-color: red;
+}
+.item2{
+    height: 40px;
+}
+
+.item2:hover{
+    background-color: pink !important;
+    cursor: pointer;
+}
+
+.box_1{
+    background-color: yellow;
+    border: 1px solid black;
+    /* padding: 10px; */
+    padding: 10px 40px;
+    margin-bottom: 20px;
+}
+
+.box_2{
+    background-color: aqua;
+    margin-top: 50px;
+    /*margin: 20px 100px;  /* 20px là khoảng cách tới các phần tử ở trên và ở dưới, 100px là ở bên trái và bên phải  */ 
+    /* margin: 20px;  */   /* 20px là khoảng cách tới các phần tử ở cả 4 phía  */ 
+    /*margin: 20px 100px 50px; /* Từ 3 thông số trở lên thì giá trị đầu tiên sẽ là khoảng cách ở bên trên
+    , bên phải, bên dưới, bên trái.*/
+}
+
+.box_3{
+    background-color: brown;
+}
+
+.typography{
+    background-color: rgb(198, 190, 190);
+    line-height: 30px
+}

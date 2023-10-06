@@ -1,0 +1,142 @@
+<h1>Accont page</h1>
+<div class="card">
+  <div class="card-header">
+    <h3>Thông tin tìm kiếm</h3>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-4">
+        <h4>Từ khóa</h4>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Recipient's username"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+      </div>
+      <div class="col-3">Nội dung</div>
+      <div class="col-3">Nội dung</div>
+
+      <div class="col-2">Nội dung</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-9">
+        <h3>Danh sách Account</h3>
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" id="buttonAccount" 
+        style="display: none;" data-target="#modalAccount" onclick="openModalUpdate()">Thêm mới</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Avatar</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Department</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>
+            <img
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/523.jpg"
+              style="width: 100px"
+            />
+          </td>
+          <td>Duc Anh</td>
+          <td>Hai An - Hai Phong</td>
+          <td>2023-08-22T22:57:17.438Z</td>
+          <td>
+            <i class="fa fa-pencil" style="font-size: 36px; color: orange"></i>
+            <i class="fa fa-trash" style="font-size: 36px; color: red"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Create  -->
+<div class="modal fade" id="modalAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAccountTitle">Thêm mới Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h5>Username</h5>
+          <input id="accountIdUpdate" style="display: none;">
+          <input type="text" id="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="mt-3">
+          <h5>Avatar</h5>
+          <input type="text" id="avatar" class="form-control" placeholder="Avatar" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="mt-3">
+          <h5>Address</h5>
+          <input type="text" id="address" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="mt-3">
+          <h5>Department</h5>
+          <select class="custom-select" id="departmentId">
+            <option selected>Lựa chọn phòng ban</option>
+            <option value="1">Phòng ban 1</option>
+            <option value="2">Phòng ban 2</option>
+            <option value="3">Phòng ban 3</option>
+          </select>
+        </div>
+
+        <div class="mt-3">
+          <h5>Create date</h5>
+          <input type="date" id="createDate" class="form-control" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="onSave()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <input id="accountIdDelete" style="display: none;">
+      <div class="modal-body">
+        Bạn có muốn xoá account?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modalDelete">Close</button>
+        <button type="button" class="btn btn-danger" onclick="deleteAccount()">Xoá</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./../js/account.js"></script>
