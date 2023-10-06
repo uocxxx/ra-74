@@ -22,14 +22,14 @@ function checkLogin(){
             // document.getElementById("buttonAccount").style.display = "block";
         }
     } else{
-        window.location = "http://127.0.0.1:5500/login.html";
+        window.location = "/login.html";
     }
 }
 
 function logout(){
     // localStorage.removeItem("")
     localStorage.clear();
-    window.location = "http://127.0.0.1:5500/login.html";
+    window.location = "/login.html";
 }
 
 function clickNavihome(){
